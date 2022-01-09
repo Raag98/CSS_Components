@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SideNavBar </title>
+    <link rel='stylesheet' href='style.css'>
+    <!-- Boxicons -->
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css'>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <i class='bx bxl-css3'></i>
+                <div class="logo_name"> SideNavBar </div>  
+            </div>
+            <i class='bx bx-menu' id='btn'></i>
+        </div>
+        <ul class="nav_list">
+            <li>
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Search">
+                <span class="tooltip"> Search </span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links"> Dashboard </span>
+                </a>
+                <span class="tooltip"> Dashboard </span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-user'></i>
+                    <span class="links"> User </span>
+                </a>
+                <span class="tooltip"> User </span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-chat'></i>
+                    <span class="links"> Messages </span>
+                </a>
+                <span class="tooltip"> Messages </span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-cart'></i>
+                    <span class="links"> Orders </span>
+                </a>
+                <span class="tooltip"> Orders </span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-heart'></i>
+                    <span class="links"> Wishlist </span>
+                </a>
+                <span class="tooltip"> Wishlist </span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-cog'></i>
+                    <span class="links"> Settings </span>
+                </a>
+                <span class="tooltip"> Settings </span>
+            </li>
+        </ul>
+    </div>
+    <div class="home_content">
+        <div class="text">Home Content</div>
+    </div>
+
+    <script>
+        let btn = document.querySelector("#btn");
+        let icon = document.querySelector(".bx-menu");
+        let sidebar = document.querySelector(".sidebar");
+        let searchBtn = document.querySelector(".bx-search");
+        
+
+        btn.onclick = function() {
+            sidebar.classList.toggle("active");
+
+            if(icon.classList.contains("bx-menu"))
+                icon.classList.replace("bx-menu", "bx-x");
+            else
+                icon.classList.replace("bx-x", "bx-menu");
+        }
+
+
+    </script>
+
+</body>
+</html>

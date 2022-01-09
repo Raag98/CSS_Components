@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    scroll-snap-align: start;
+}
+
+.container {
+    scroll-snap-type: y mandatory; 
+    /* mandatory -> Scroll directly */
+    /* proximity -> Scroll when edge is near */
+    overflow-y: scroll;
+    height: 100vh;
+    /* scroll-padding: 50px; */
+}
+
+.one {
+    background: rgb(235, 103, 52);
+}
+
+.two {
+    background: rgb(52, 226, 235);
+}
+
+.three {
+    background: rgb(79, 235, 52);
+}
+
+.four {
+    background: rgb(235, 195, 52);
+}
+
+.five {
+    background: rgb(220, 52, 235);
+}
